@@ -4786,3 +4786,100 @@ h4 {
   height: 100px;
   margin-bottom: 34px;
 }
+
+
+/* =========================================================
+   Preloader: always centered on mobile (final override)
+   ========================================================= */
+
+html:has(body.is-loading) {
+  overflow: hidden;
+}
+
+.loader {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  max-width: 100%;
+  height: 100vh;
+  height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: env(safe-area-inset-top, 0) env(safe-area-inset-right, 0) env(safe-area-inset-bottom, 0) env(safe-area-inset-left, 0);
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.loader__inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: min(360px, calc(100% - 48px));
+  margin: 0 auto;
+  text-align: center;
+}
+
+.loader__mark {
+  position: relative;
+  flex: none;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 34px;
+}
+
+.loader__logo {
+  display: block;
+  flex: none;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.loader__note,
+.loader__count {
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  text-align: center;
+}
+
+.loader__note {
+  padding-left: 0.19em; /* balances the trailing letter-spacing so text looks centered */
+}
+
+.loader__count {
+  padding-left: 0.12em;
+}
+
+.loader__track {
+  width: 100%;
+}
+
+@media (max-width: 520px) {
+  .loader__glow--coral {
+    top: -140px;
+    left: -140px;
+    width: 340px;
+    height: 340px;
+  }
+
+  .loader__glow--aqua {
+    right: -160px;
+    bottom: -140px;
+    width: 380px;
+    height: 380px;
+  }
+
+  .loader__glow--butter {
+    top: 50%;
+    right: 8%;
+    width: 140px;
+    height: 140px;
+  }
+}
