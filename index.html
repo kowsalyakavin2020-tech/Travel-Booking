@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#191433">
+  <meta name="description" content="Stackly curates bold stays, slow itineraries and joyful escapes. Find your next story with a travel atelier that plans like a local.">
+  <link rel="icon" href="images/logo-icon.webp" type="image/png">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+  <link rel="stylesheet" href="css/home.css">
+  <title>Stackly — Travel, wildly well planned.</title>
+</head>
+<body class="is-loading">
+
+  <!-- Loader -->
+  <div class="loader" id="preloader" aria-hidden="true">
+    <span class="loader__glow loader__glow--coral"></span>
+    <span class="loader__glow loader__glow--aqua"></span>
+    <span class="loader__glow loader__glow--butter"></span>
+    <div class="loader__inner">
+      <div class="loader__mark">
+        <div class="loader__lottie" id="preloaderLottie"></div>
+        </div>
+      <img class="loader__logo" src="images/logo-full-light.webp" alt="" width="1200" height="370">
+      <p class="loader__note">Packing the good stuff</p>
+      <div class="loader__track"><span id="preloaderBar"></span></div>
+      <span class="loader__count" id="preloaderPercent">0%</span>
+    </div>
+  </div>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Header -->
+  <header class="site-header" id="siteHeader">
+    <div class="shell header__inner">
+      <a class="brand" href="index.html" aria-label="Stackly home">
+        <img src="images/logo-full-dark.webp" alt="Stackly" width="1200" height="370">
+      </a>
+
+      <nav class="main-nav" aria-label="Primary navigation">
+        <a class="is-active" href="#home">Home</a>
+        <a href="#destination">Destination</a>
+        <a href="#stays">Stays</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="header__actions">
+        <button class="wish-trigger" id="wishlistTrigger" type="button" aria-label="Open wishlist">
+          <i class="fa-regular fa-heart"></i>
+          <span id="wishlistCount">0</span>
+        </button>
+        <a class="btn btn--ink btn--sm header__book" href="HTML/404.html">Plan a trip <i class="fa-solid fa-arrow-right"></i></a>
+        <button class="hamburger" id="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-menu__top shell">
+      <a class="brand brand--light" href="index.html" aria-label="Stackly home">
+        <img src="images/logo-full-light.webp" alt="Stackly" width="1200" height="370">
+      </a>
+      <button class="mobile-menu__close" id="menuClose" type="button" aria-label="Close menu">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <nav class="mobile-menu__nav shell" aria-label="Mobile navigation">
+      <a href="#home">Home <i class="fa-solid fa-arrow-right"></i></a>
+      <a href="#destination">Destination <i class="fa-solid fa-arrow-right"></i></a>
+      <a href="#stays">Stays <i class="fa-solid fa-arrow-right"></i></a>
+      <a href="#about">About <i class="fa-solid fa-arrow-right"></i></a>
+      <a href="#contact">Contact <i class="fa-solid fa-arrow-right"></i></a>
+    </nav>
+
+    <div class="mobile-menu__bottom shell">
+      <div>
+        <p class="mobile-menu__label">Speak to a human</p>
+        <a href="HTML/404.html">info@stackly.com</a>
+        <a href="HTML/404.html">+9876543567</a>
+      </div>
+      <div class="socials">
+        <a href="HTML/404.html" aria-label="Stackly on Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="HTML/404.html" aria-label="Stackly on Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+        <a href="HTML/404.html" aria-label="Stackly on YouTube"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero" id="home">
+      <span class="hero__sun"></span>
+      <span class="hero__arc"></span>
+      <span class="hero__dot hero__dot--one"></span>
+      <span class="hero__dot hero__dot--two"></span>
+
+      <div class="shell hero__grid">
+        <div class="hero__copy">
+          <p class="eyebrow"><span></span>Travel atelier · since 2014</p>
+          <h1>Go where the <span class="marker">story</span> finds you.</h1>
+          <p class="hero__lede">Bold stays, slow mornings and the kind of places you keep to yourself. We plan the details so you can get happily lost.</p>
+
+          <div class="hero__actions">
+            <a class="btn btn--coral btn--lg" href="HTML/404.html">Find your escape <i class="fa-solid fa-arrow-right"></i></a>
+            <a class="btn btn--outline btn--lg" href="HTML/404.html">Price a trip <i class="fa-solid fa-compass"></i></a>
+          </div>
+
+          <div class="hero__proof">
+            <div class="avatar-stack" aria-hidden="true">
+              <img src="images/avatar-1.webp" alt="" width="220" height="220">
+              <img src="images/avatar-2.webp" alt="" width="220" height="220">
+              <img src="images/avatar-3.webp" alt="" width="220" height="220">
+              <span>12k</span>
+            </div>
+            <div>
+              <div class="stars" aria-label="Rated 4.9 out of 5">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              </div>
+              <p><strong>4.9</strong> from 12,000+ happy travellers</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__visual" aria-label="A collage of travel moments">
+          <figure class="hero__photo hero__photo--main">
+            <img src="images/hero.webp" alt="Pastel houses on the Amalfi Coast at golden hour" width="1600" height="1000" fetchpriority="high">
+          </figure>
+          <figure class="hero__photo hero__photo--small">
+            <img src="images/dest-santorini.webp" alt="Whitewashed houses and blue domes in Santorini" width="1200" height="800" loading="lazy">
+          </figure>
+          <div class="hero__ticket">
+            <span>Next stop</span>
+            <strong>Somewhere new</strong>
+            <i class="fa-solid fa-plane"></i>
+          </div>
+          <div class="hero__stamp">
+            <i class="fa-solid fa-map-location-dot"></i>
+            <span>curated<br>escapes</span>
+          </div>
+          <span class="hero__scribble" aria-hidden="true"></span>
+        </div>
+      </div>
+
+      <div class="shell">
+        <form class="search-ticket" id="heroSearch" novalidate>
+          <div class="search-ticket__ribbon">
+            <span><i class="fa-solid fa-sliders"></i> Build your escape</span>
+            <small>No booking fees · flexible dates</small>
+          </div>
+
+          <div class="search-ticket__grid">
+            <div class="field field--destination">
+              <label class="field__label" for="destinationInput"><i class="fa-solid fa-location-dot"></i> Where to?</label>
+              <div class="field__control">
+                <input id="destinationInput" name="destination" type="text" placeholder="Santorini, Kyoto, anywhere…" autocomplete="off" aria-autocomplete="list" aria-controls="destinationSuggestions">
+              </div>
+              <div class="suggestions" id="destinationSuggestions" role="listbox" aria-label="Destination suggestions"></div>
+              <small>8 handpicked places</small>
+            </div>
+
+            <div class="field">
+              <label class="field__label" for="checkIn"><i class="fa-regular fa-calendar"></i> Check-in</label>
+              <div class="field__control">
+                <input id="checkIn" name="checkIn" type="date">
+              </div>
+              <small id="dateHint">Add dates for the best rates</small>
+            </div>
+
+            <div class="field">
+              <label class="field__label" for="checkOut"><i class="fa-regular fa-calendar-check"></i> Check-out</label>
+              <div class="field__control">
+                <input id="checkOut" name="checkOut" type="date">
+              </div>
+              <small id="nightsHint">4 nights</small>
+            </div>
+
+            <div class="field field--guests">
+              <span class="field__label"><i class="fa-solid fa-user-group"></i> Guests</span>
+              <button class="guest-trigger" id="guestToggle" type="button" aria-expanded="false" aria-controls="guestPopover">
+                <span id="guestSummary">2 adults · 1 room</span>
+                <i class="fa-solid fa-chevron-down"></i>
+              </button>
+              <small>Children welcome</small>
+
+              <div class="guest-popover" id="guestPopover" hidden>
+                <div class="guest-row">
+                  <div><strong>Adults</strong><span>12 and over</span></div>
+                  <div class="stepper">
+                    <button type="button" data-guest-step="adults" data-dir="-1" aria-label="Remove adult"><i class="fa-solid fa-minus"></i></button>
+                    <span data-guest-count="adults">2</span>
+                    <button type="button" data-guest-step="adults" data-dir="1" aria-label="Add adult"><i class="fa-solid fa-plus"></i></button>
+                  </div>
+                </div>
+                <div class="guest-row">
+                  <div><strong>Children</strong><span>2 to 11</span></div>
+                  <div class="stepper">
+                    <button type="button" data-guest-step="children" data-dir="-1" aria-label="Remove child"><i class="fa-solid fa-minus"></i></button>
+                    <span data-guest-count="children">0</span>
+                    <button type="button" data-guest-step="children" data-dir="1" aria-label="Add child"><i class="fa-solid fa-plus"></i></button>
+                  </div>
+                </div>
+                <div class="guest-row">
+                  <div><strong>Rooms</strong><span>One key each</span></div>
+                  <div class="stepper">
+                    <button type="button" data-guest-step="rooms" data-dir="-1" aria-label="Remove room"><i class="fa-solid fa-minus"></i></button>
+                    <span data-guest-count="rooms">1</span>
+                    <button type="button" data-guest-step="rooms" data-dir="1" aria-label="Add room"><i class="fa-solid fa-plus"></i></button>
+                  </div>
+                </div>
+                <button class="btn btn--ink btn--full" id="guestDone" type="button">Done</button>
+              </div>
+            </div>
+
+            <button class="btn btn--ink search-ticket__submit" type="submit">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <span>Search</span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Ribbon -->
+    <div class="ribbon" aria-hidden="true">
+      <div class="ribbon__track" data-marquee data-speed="70">
+        <span>Handpicked stays <i class="fa-solid fa-star"></i> Slow itineraries <i class="fa-solid fa-star"></i> Local guides <i class="fa-solid fa-star"></i> No hidden extras <i class="fa-solid fa-star"></i> 4.9 traveller rating <i class="fa-solid fa-star"></i></span>
+        <span>Handpicked stays <i class="fa-solid fa-star"></i> Slow itineraries <i class="fa-solid fa-star"></i> Local guides <i class="fa-solid fa-star"></i> No hidden extras <i class="fa-solid fa-star"></i> 4.9 traveller rating <i class="fa-solid fa-star"></i></span>
+      </div>
+    </div>
+
+    <!-- Destinations -->
+    <section class="section destinations" id="destination">
+      <div class="shell">
+        <div class="section-top" data-aos="fade-up">
+          <div>
+            <p class="eyebrow"><span></span>Destination</p>
+            <h2>Choose a place <span class="marker marker--aqua">by feeling.</span></h2>
+          </div>
+          <div class="section-top__aside">
+            <p>Coast, city, mountain or a little of everything. Start with a mood and let the map follow.</p>
+          </div>
+        </div>
+
+        <div class="destination-controls" data-aos="fade-up" data-aos-delay="80">
+          <label class="mini-search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input id="destinationSearch" type="search" placeholder="Search a place or country" autocomplete="off">
+          </label>
+          <div class="chips" id="destinationFilters" role="group" aria-label="Filter destinations">
+            <button class="chip is-active" type="button" data-category="all">All</button>
+            <button class="chip" type="button" data-category="coast">Coast</button>
+            <button class="chip" type="button" data-category="island">Island</button>
+            <button class="chip" type="button" data-category="culture">Culture</button>
+            <button class="chip" type="button" data-category="mountain">Mountain</button>
+            <button class="chip" type="button" data-category="city">City</button>
+          </div>
+          <p class="result-note" id="destinationCount">8 places</p>
+        </div>
+
+        <div class="destination-rail" id="destinationsTrack" aria-live="polite"></div>
+        <p class="empty-state" id="destinationEmpty" hidden>No places match that mood yet. Try another filter.</p>
+      </div>
+    </section>
+
+    <!-- Featured stays -->
+    <section class="section stays" id="stays">
+      <div class="shell">
+        <div class="section-top" data-aos="fade-up">
+          <div>
+            <p class="eyebrow"><span></span>Featured stays</p>
+            <h2>Rooms that are <span class="marker">worth the trip.</span></h2>
+          </div>
+          <div class="section-top__aside">
+            <p>Design-led, family-run, a little unexpected. Every stay is visited by us before it reaches you.</p>
+            <p class="result-note" id="hotelCount">Showing 10 curated stays</p>
+          </div>
+        </div>
+
+        <div class="filter-board" data-aos="fade-up" data-aos-delay="70">
+          <label class="mini-search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input id="hotelSearch" type="search" placeholder="Search stays" autocomplete="off">
+          </label>
+
+          <label class="select-field">
+            <span>Destination</span>
+            <select id="destinationFilter">
+              <option value="all">All destinations</option>
+              <option value="Santorini">Santorini</option>
+              <option value="Bali">Bali</option>
+              <option value="Kyoto">Kyoto</option>
+              <option value="Swiss Alps">Swiss Alps</option>
+              <option value="Marrakech">Marrakech</option>
+              <option value="Maldives">Maldives</option>
+              <option value="Paris">Paris</option>
+              <option value="Lisbon">Lisbon</option>
+            </select>
+          </label>
+
+          <label class="range-field">
+            <span>Max price <strong id="priceOutput">$600</strong></span>
+            <input id="priceRange" type="range" min="150" max="600" step="10" value="600">
+          </label>
+
+          <div class="chip-group">
+            <span class="filter-label">Rating</span>
+            <div class="chips" id="ratingChips">
+              <button class="chip is-active" type="button" data-rating="0">Any</button>
+              <button class="chip" type="button" data-rating="4.5">4.5+</button>
+              <button class="chip" type="button" data-rating="4.7">4.7+</button>
+              <button class="chip" type="button" data-rating="4.9">4.9+</button>
+            </div>
+          </div>
+
+          <label class="select-field">
+            <span>Sort by</span>
+            <select id="sortHotels">
+              <option value="recommended">Our pick</option>
+              <option value="price-asc">Price: low to high</option>
+              <option value="price-desc">Price: high to low</option>
+              <option value="rating-desc">Best rated</option>
+              <option value="name-asc">Name A–Z</option>
+            </select>
+          </label>
+
+          <button class="btn btn--outline btn--sm" id="resetHotelFilters" type="button">Reset</button>
+        </div>
+
+        <div class="stay-grid" id="hotelGrid"></div>
+        <p class="empty-state" id="hotelEmpty" hidden>No stays match those filters. Widen the search and try again.</p>
+      </div>
+    </section>
+
+    <!-- Offers -->
+    <section class="section offers" id="offers">
+      <div class="shell">
+        <div class="section-top section-top--light" data-aos="fade-up">
+          <div>
+            <p class="eyebrow eyebrow--light"><span></span>Special offers</p>
+            <h2>Fares worth <span class="marker marker--butter">changing plans</span> for.</h2>
+          </div>
+          <div class="section-top__aside">
+            <p>Quiet-season rates, long-stay gifts and a few well-kept secrets. Copy the code and keep it for later.</p>
+            <div class="countdown">
+              <span>Offers end in</span>
+              <div class="countdown__digits" id="offerCountdown" aria-live="off">
+                <strong id="countdownDays">06</strong><em>d</em>
+                <strong id="countdownHours">09</strong><em>h</em>
+                <strong id="countdownMinutes">00</strong><em>m</em>
+                <strong id="countdownSeconds">00</strong><em>s</em>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="offers-grid" id="offersGrid"></div>
+      </div>
+    </section>
+
+    <!-- Planner -->
+    <section class="section planner" id="planner">
+      <div class="shell">
+        <div class="section-top" data-aos="fade-up">
+          <div>
+            <p class="eyebrow"><span></span>Price planner</p>
+            <h2>Your trip, <span class="marker marker--aqua">priced live.</span></h2>
+          </div>
+          <div class="section-top__aside">
+            <p>Choose a stay, slide in your dates and see an honest estimate before you speak to anyone.</p>
+          </div>
+        </div>
+
+        <div class="planner-grid" data-aos="fade-up" data-aos-delay="70">
+          <div class="planner-controls">
+            <div class="control-pair">
+              <label class="select-field">
+                <span>Destination</span>
+                <select id="estimateDestination"></select>
+              </label>
+              <label class="select-field">
+                <span>Stay</span>
+                <select id="estimateHotel"></select>
+              </label>
+            </div>
+
+            <label class="slide-field">
+              <span>Nights <output id="nightsOutput">5</output></span>
+              <input id="estimateNights" type="range" min="2" max="14" step="1" value="5">
+            </label>
+
+            <label class="slide-field">
+              <span>Guests <output id="guestsOutput">2</output></span>
+              <input id="estimateGuests" type="range" min="1" max="6" step="1" value="2">
+            </label>
+
+            <div class="extras">
+              <label class="extra">
+                <input id="addBreakfast" type="checkbox">
+                <span class="extra__icon"><i class="fa-solid fa-mug-hot"></i></span>
+                <span><strong>Breakfast</strong><small>$24 per guest / night</small></span>
+              </label>
+              <label class="extra">
+                <input id="addTransfer" type="checkbox">
+                <span class="extra__icon"><i class="fa-solid fa-car-side"></i></span>
+                <span><strong>Airport transfer</strong><small>Private, one way</small></span>
+              </label>
+              <label class="extra">
+                <input id="addSpa" type="checkbox">
+                <span class="extra__icon"><i class="fa-solid fa-spa"></i></span>
+                <span><strong>Spa credit</strong><small>$80 towards a treatment</small></span>
+              </label>
+            </div>
+
+            <button class="btn btn--coral btn--full" id="estimateCta" type="button">Save this trip <i class="fa-regular fa-heart"></i></button>
+          </div>
+
+          <aside class="trip-receipt" aria-label="Trip estimate summary">
+            <div class="trip-receipt__head">
+              <span>Stackly / trip estimate</span>
+              <i class="fa-solid fa-plane"></i>
+            </div>
+            <p class="trip-receipt__hotel" id="receiptHotel">Aegean Cliff House</p>
+            <p class="trip-receipt__meta" id="receiptMeta">Santorini · 5 nights · 2 guests</p>
+
+            <div class="trip-receipt__rows">
+              <div><span>Stay</span><strong id="priceStay">$2,100</strong></div>
+              <div><span>Extras</span><strong id="priceExtras">$0</strong></div>
+              <div><span>Planning fee</span><strong id="priceService">$168</strong></div>
+            </div>
+
+            <div class="trip-receipt__total">
+              <span>Estimated total</span>
+              <strong id="priceTotal">$2,268</strong>
+            </div>
+
+            <p class="trip-receipt__note"><i class="fa-solid fa-shield-heart"></i> No payment taken. Your estimate is saved to your wishlist.</p>
+            <div class="trip-receipt__barcode" aria-hidden="true"></div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section about" id="about">
+      <div class="shell">
+        <div class="about-grid">
+          <div class="about-media" data-aos="fade-right">
+            <figure class="about-photo about-photo--tall">
+              <img src="images/why-1.webp" alt="A traveller looking out over a warm coastal landscape" width="1200" height="1500" loading="lazy">
+            </figure>
+            <figure class="about-photo about-photo--small">
+              <img src="images/why-2.webp" alt="A detail of local life on a Stackly journey" width="900" height="900" loading="lazy">
+            </figure>
+            <div class="about-stamp">
+              <strong>11</strong>
+              <span>years of<br>slow travel</span>
+            </div>
+          </div>
+
+          <div class="about-copy" data-aos="fade-left">
+            <p class="eyebrow"><span></span>About Stackly</p>
+            <h2>Less itinerary. <span class="marker marker--coral">More story.</span></h2>
+            <p>We are a small team of planners, walkers and restaurant-notebook keepers. We travel first, then build trips around the moments we would want for ourselves.</p>
+
+            <div class="about-points">
+              <div>
+                <span class="about-points__icon"><i class="fa-solid fa-hand-holding-heart"></i></span>
+                <h3>People, not portals</h3>
+                <p>One real human plans your trip, from first idea to the last taxi.</p>
+              </div>
+              <div>
+                <span class="about-points__icon"><i class="fa-solid fa-seedling"></i></span>
+                <h3>Local first</h3>
+                <p>Family-run stays, neighbourhood guides and money that stays close.</p>
+              </div>
+              <div>
+                <span class="about-points__icon"><i class="fa-solid fa-feather-pointed"></i></span>
+                <h3>Slow by design</h3>
+                <p>Fewer stops, longer stays and room for the day to surprise you.</p>
+              </div>
+              <div>
+                <span class="about-points__icon"><i class="fa-solid fa-circle-check"></i></span>
+                <h3>No hidden extras</h3>
+                <p>Clear pricing, honest advice and no mystery line on your invoice.</p>
+              </div>
+            </div>
+
+            <div class="stats-row">
+              <div><strong data-count="12000" data-suffix="+">12,000+</strong><span>travellers sent</span></div>
+              <div><strong data-count="38">38</strong><span>countries explored</span></div>
+              <div><strong data-count="4.9" data-decimals="1">4.9</strong><span>average rating</span></div>
+              <div><strong data-count="11">11</strong><span>years planning</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Postcards -->
+    <section class="postcards" aria-label="Travel postcards">
+      <div class="postcards__head shell" data-aos="fade-up">
+        <div>
+          <p class="eyebrow eyebrow--light"><span></span>Postcards</p>
+          <h2>The light is always <span class="marker marker--butter">better elsewhere.</span></h2>
+        </div>
+        <p>A few frames from the road, sent back to make you restless.</p>
+      </div>
+
+      <div class="postcard-marquee">
+        <div class="postcard-track" data-marquee data-speed="45">
+          <div class="postcard-group">
+            <figure class="postcard"><img src="images/gallery-1.webp" alt="Pastel houses by the sea at sunrise" width="900" height="1100" loading="lazy"><figcaption>Positano, 7:12am</figcaption></figure>
+            <figure class="postcard"><img src="images/gallery-2.webp" alt="A quiet mountain road in the Alps" width="900" height="1100" loading="lazy"><figcaption>The long way to Zermatt</figcaption></figure>
+            <figure class="postcard"><img src="images/gallery-3.webp" alt="Clear Aegean water and a rocky coast" width="900" height="1100" loading="lazy"><figcaption>Aegean blue, no filter</figcaption></figure>
+            <figure class="postcard"><img src="images/gallery-4.webp" alt="A lantern-lit street after rain" width="900" height="1100" loading="lazy"><figcaption>Kyoto after rain</figcaption></figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Journal -->
+    <section class="section journal" id="journal">
+      <div class="shell">
+        <div class="section-top" data-aos="fade-up">
+          <div>
+            <p class="eyebrow"><span></span>Field notes</p>
+            <h2>Small guides for <span class="marker">bigger trips.</span></h2>
+          </div>
+          <div class="section-top__aside">
+            <p>Things we learned on the road, written down before we forgot them.</p>
+            <a class="text-link" href="#journal">Read all notes <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="journal-grid" data-aos="fade-up" data-aos-delay="70">
+          <article class="journal-feature">
+            <div class="journal-feature__media">
+              <img src="images/journal-1.webp" alt="A sunlit Lisbon street with tiled buildings" width="1200" height="900" loading="lazy">
+            </div>
+            <div class="journal-feature__body">
+              <span class="tag">Field guide</span>
+              <h3>A slow weekend in Lisbon</h3>
+              <p>Pastel de nata before nine, a ferry to nowhere in particular and the best table we found in Alfama.</p>
+              <a class="text-link" href="HTML/404.html">Read the note <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+
+          <div class="journal-side">
+            <article class="journal-mini">
+              <img src="images/journal-2.webp" alt="A packing detail with warm layers and a camera" width="900" height="700" loading="lazy">
+              <div>
+                <span class="tag tag--aqua">Packing</span>
+                <h3>How to pack for a colder coast</h3>
+                <a class="text-link" href="HTML/404.html">Read the note <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </article>
+            <article class="journal-mini">
+              <img src="images/journal-3.webp" alt="A quiet Japanese garden detail" width="900" height="700" loading="lazy">
+              <div>
+                <span class="tag tag--butter">Slow travel</span>
+                <h3>The art of doing less in Kyoto</h3>
+                <a class="text-link" href="HTML/404.html">Read the note <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section stories" id="stories">
+      <div class="shell">
+        <div class="stories-grid">
+          <div class="stories-intro" data-aos="fade-right">
+            <p class="eyebrow"><span></span>Traveller stories</p>
+            <h2>Sent from <span class="marker">somewhere</span> good.</h2>
+            <p>Real notes from people who let us plan the details and found something better than a checklist.</p>
+
+            <div class="stories-proof">
+              <div class="avatar-stack" aria-hidden="true">
+                <img src="images/avatar-4.webp" alt="" width="220" height="220">
+                <img src="images/avatar-5.webp" alt="" width="220" height="220">
+                <img src="images/avatar-6.webp" alt="" width="220" height="220">
+                <span>4.9</span>
+              </div>
+              <p>Average rating across 2,400+ verified trips.</p>
+            </div>
+
+            <div class="slider-controls">
+              <button id="testimonialPrev" type="button" aria-label="Previous traveller story"><i class="fa-solid fa-arrow-left"></i></button>
+              <button id="testimonialNext" type="button" aria-label="Next traveller story"><i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+          </div>
+
+          <div class="stories-stage" data-aos="fade-left">
+            <div class="testimonial-viewport" id="testimonialViewport">
+              <div class="testimonial-track" id="testimonialTrack"></div>
+            </div>
+            <div class="testimonial-dots" id="testimonialDots"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="section newsletter" id="contact">
+      <div class="shell">
+        <div class="newsletter-grid">
+          <div class="newsletter-copy" data-aos="fade-right">
+            <p class="eyebrow eyebrow--light"><span></span>The good kind of mail</p>
+            <h2>Postcards, <span class="marker marker--ink">not spam.</span></h2>
+            <p>One thoughtful letter a month: new stays, quiet-season ideas and the places we cannot stop talking about.</p>
+            <ul class="newsletter-perks">
+              <li><i class="fa-solid fa-check"></i> First look at new destinations</li>
+              <li><i class="fa-solid fa-check"></i> Early access to offers</li>
+              <li><i class="fa-solid fa-check"></i> Zero spam, ever</li>
+            </ul>
+          </div>
+
+          <form class="newsletter-form" id="newsletterForm" novalidate data-aos="fade-left">
+            <label for="newsletterEmail">Your email address</label>
+            <div class="newsletter-form__row">
+              <input id="newsletterEmail" type="email" name="email" placeholder="you@somewhere.com" autocomplete="email">
+              <button class="btn btn--ink" type="submit">Join the list <i class="fa-solid fa-paper-plane"></i></button>
+            </div>
+            <p class="form-message" id="newsletterMessage" aria-live="polite"></p>
+            <p class="form-note"><i class="fa-solid fa-lock"></i> We keep your details to ourselves. Unsubscribe anytime.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="shell">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand brand--light" href="index.html" aria-label="Stackly home">
+        <img src="images/logo-full-light.webp" alt="Stackly" width="1200" height="370">
+      </a>
+          <p>Travel, wildly well planned. We find the places that stay with you.</p>
+          <div class="socials">
+            <a href="HTML/404.html" aria-label="Stackly on Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="HTML/404.html" aria-label="Stackly on Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+            <a href="HTML/404.html" aria-label="Stackly on YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h3>Explore</h3>
+          <a href="index.html"><i class="fa-solid fa-house"></i>Home</a>
+          <a href="#destination"><i class="fa-solid fa-earth-americas"></i>Destination</a>
+          <a href="#stays"><i class="fa-solid fa-bed"></i>Stays</a>
+          <a href="#about"><i class="fa-solid fa-circle-info"></i>About</a>
+          <a href="#contact"><i class="fa-solid fa-envelope"></i>Contact</a>
+        </div>
+
+        <div class="footer-col">
+          <h3>Good to know</h3>
+          <a href="HTML/404.html"><i class="fa-solid fa-tags"></i>Special offers</a>
+          <a href="HTML/404.html"><i class="fa-solid fa-calculator"></i>Price planner</a>
+          <a href="HTML/404.html"><i class="fa-solid fa-book-open"></i>Field notes</a>
+          <a href="HTML/404.html"><i class="fa-solid fa-comments"></i>Traveller stories</a>
+        </div>
+
+        <div class="footer-col footer-contact">
+          <h3>Say hello</h3>
+          <a href="HTML/404.html"><i class="fa-solid fa-envelope"></i>info@stackly.com</a>
+          <a href="HTML/404.html"><i class="fa-solid fa-phone"></i>+9876543567</a>
+          <p><i class="fa-solid fa-location-dot"></i><span>MMR Complex, Chinna Thirupathi, near Chinna Muniyappan Kovil, Salem, Tamil Nadu 636008</span></p>
+          <span class="footer-hours"><i class="fa-regular fa-clock"></i>Mon–Sat, 9am–7pm IST</span>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© <span id="footerYear">2026</span> Stackly. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="HTML/404.html">Privacy</a>
+          <a href="HTML/404.html">Terms</a>
+          <a href="HTML/404.html">Accessibility</a>
+        </div>
+        <a class="footer-top" href="#home">Back to top <i class="fa-solid fa-arrow-up"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Wishlist -->
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+  <aside class="wishlist" id="wishlistDrawer" aria-hidden="true" aria-labelledby="wishlistTitle">
+    <div class="wishlist__head">
+      <div>
+        <p class="eyebrow"><span></span>Saved for later</p>
+        <h2 id="wishlistTitle">Your wishlist</h2>
+      </div>
+      <button class="wishlist__close" id="wishlistClose" type="button" aria-label="Close wishlist"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="wishlist__body">
+      <div class="wishlist-empty" id="wishlistEmpty">
+        <span><i class="fa-regular fa-heart"></i></span>
+        <h3>Nothing saved yet</h3>
+        <p>Tap the heart on a place or stay and it will wait for you here.</p>
+        <button class="btn btn--outline btn--sm" id="wishlistExplore" type="button">Explore stays <i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+      <div class="wishlist-items" id="wishlistItems"></div>
+    </div>
+    <div class="wishlist__foot">
+      <p><span id="wishlistFootCount">0</span> saved escapes</p>
+      <button class="btn btn--coral btn--sm" id="wishlistPlan" type="button">Plan this trip <i class="fa-solid fa-arrow-right"></i></button>
+    </div>
+  </aside>
+
+  <button class="back-to-top" id="backToTop" type="button" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+  <div class="toast-stack" id="toastStack" role="status" aria-live="polite"></div>
+
+  <noscript>
+    <style>.loader{display:none!important}.site-header{position:sticky;background:#FFF7EC}body.is-loading{overflow:auto}</style>
+  </noscript>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js" defer></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js" defer></script>
+  <script src="js/home.js" defer></script>
+</body>
+</html>

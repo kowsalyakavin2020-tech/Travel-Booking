@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#191433">
+  <meta name="description" content="This page missed its flight. Head back home and find your next escape with Stackly.">
+  <link rel="icon" href="../images/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="../images/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="../css/404.css">
+  <title>Page not found — Stackly</title>
+</head>
+<body>
+  <main class="nf" id="main">
+
+    <!-- Atmosphere -->
+    <div class="nf__sky" aria-hidden="true">
+      <span class="nf__glow nf__glow--coral"></span>
+      <span class="nf__glow nf__glow--aqua"></span>
+      <span class="nf__stars"></span>
+      <span class="nf__cloud nf__cloud--one"></span>
+      <span class="nf__cloud nf__cloud--two"></span>
+      <svg class="nf__path" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" focusable="false">
+        <path id="flightPath" d="M-60 780 C 280 560, 520 760, 760 470 S 1190 150, 1520 190" fill="none" stroke="rgba(255,247,236,.22)" stroke-width="2.5" stroke-dasharray="3 13" stroke-linecap="round"/>
+        <g>
+          <polygon points="-14,-9 22,0 -14,9 -7,0" fill="#ffd166"/>
+          <animateMotion dur="11s" repeatCount="indefinite" rotate="auto">
+            <mpath href="#flightPath"/>
+          </animateMotion>
+        </g>
+      </svg>
+    </div>
+
+    <!-- Logo -->
+    <header class="nf__top">
+      <a class="nf__logo" href="../index.html" aria-label="Stackly home">
+        <img src="../images/logo-full-light.webp" alt="Stackly" width="1200" height="370">
+      </a>
+    </header>
+
+    <!-- Content -->
+    <section class="nf__center" aria-labelledby="nfTitle">
+      <div class="nf__digits" role="img" aria-label="Error 404">
+        <span class="nf__digit nf__digit--a" aria-hidden="true">4</span>
+        <span class="nf__globe" aria-hidden="true">
+          <svg viewBox="0 0 120 120" focusable="false">
+            <defs>
+              <radialGradient id="globeFill" cx="36%" cy="30%" r="80%">
+                <stop offset="0" stop-color="#7fe6dc"/>
+                <stop offset=".55" stop-color="#20b6a8"/>
+                <stop offset="1" stop-color="#087f75"/>
+              </radialGradient>
+              <clipPath id="globeClip"><circle cx="60" cy="60" r="46"/></clipPath>
+            </defs>
+            <circle cx="65.5" cy="66" r="46" fill="#ff5b45"/>
+            <circle cx="60" cy="60" r="46" fill="url(#globeFill)"/>
+            <g clip-path="url(#globeClip)" fill="none" stroke="rgba(255,247,236,.28)" stroke-width="1.4">
+              <ellipse cx="60" cy="60" rx="20" ry="46"/>
+              <ellipse cx="60" cy="60" rx="38" ry="46"/>
+              <path d="M10 60h100M16 38h88M16 82h88"/>
+              <path d="M34 34c8-6 18-4 22 2s-2 12-10 14-16-2-12-16z" fill="rgba(255,247,236,.34)" stroke="none"/>
+              <path d="M66 62c10-4 22 0 24 10s-8 18-18 16-12-22-6-26z" fill="rgba(255,247,236,.34)" stroke="none"/>
+            </g>
+            <ellipse class="nf__ring" cx="60" cy="60" rx="58" ry="19" transform="rotate(-24 60 60)" fill="none" stroke="rgba(255,247,236,.6)" stroke-width="2" stroke-dasharray="2 7" stroke-linecap="round"/>
+            <g transform="rotate(-24 60 60)">
+              <polygon points="-7,-5 11,0 -7,5 -3,0" fill="#ff5b45" stroke="#191433" stroke-width="1.6" stroke-linejoin="round"/>
+              <animateMotion dur="5.5s" repeatCount="indefinite" rotate="auto" path="M2 60 a58 19 0 1 0 116 0 a58 19 0 1 0 -116 0"/>
+            </g>
+          </svg>
+        </span>
+        <span class="nf__digit nf__digit--b" aria-hidden="true">4</span>
+      </div>
+
+      <div class="nf__copy">
+        <p class="nf__kicker"><span></span>Flight 404 · Page not found</p>
+        <h1 id="nfTitle">This page missed <em>its flight.</em></h1>
+        <p class="nf__lede">The link may be broken, or the page has moved on to somewhere warmer. Let’s get you back on the map.</p>
+
+        <div class="nf__actions">
+          <a class="nf__btn nf__btn--primary" href="../index.html">
+            Back to home <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <button class="nf__btn nf__btn--ghost" id="goBack" type="button">
+            <i class="fa-solid fa-rotate-left"></i> Go back
+          </button>
+        </div>
+
+        <ul class="nf__pass" aria-label="Boarding pass details">
+          <li><small>Gate</small><strong>404</strong></li>
+          <li><small>Destination</small><strong>Unknown</strong></li>
+          <li><small>Status</small><strong>Wandering</strong></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <script src="../js/404.js"></script>
+</body>
+</html>
