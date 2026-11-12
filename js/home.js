@@ -897,7 +897,7 @@
     const matches = destinations.filter((destination) => {
       if (!term) return true;
       return `${destination.name} ${destination.country} ${destination.tag}`.toLowerCase().includes(term);
-    }).slice(0, 5);
+    });
 
     if (!matches.length) {
       panel.innerHTML = '<p class="suggestion-empty">No places match that yet. Try “Bali” or “Kyoto”.</p>';

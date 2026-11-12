@@ -4883,3 +4883,22 @@ html:has(body.is-loading) {
     height: 140px;
   }
 }
+
+/* =========================================================
+   Hero search: "Where to?" suggestions must never be clipped
+   ========================================================= */
+
+.hero {
+  overflow-x: clip;
+  overflow-y: visible;
+}
+
+.search-ticket {
+  z-index: 30;
+}
+
+.suggestions {
+  max-height: min(470px, 60vh);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
